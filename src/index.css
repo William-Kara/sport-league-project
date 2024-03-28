@@ -1,0 +1,209 @@
+/* CSS variables */
+:root {
+	/* Fonts sizes variables */
+	--menu-fs: 16px;
+	--headings-fs: 24px;
+	--table-header-fs: 12px;
+	--unbolded-cells-fs: 14px;
+	--bolded-cell-fs: 16px;
+
+	/* Colors variables */
+	--menu-font-color: #ffffff;
+	--page-heading-font-color: #182c62;
+	--table-font-color: #4b5c68;
+	--footer-font-color: #4b5c68;
+	--header-bg-color: #025feb;
+	--footer-bg-color: #f6f7f7;
+	--table-header-bg-color: #e4edf2;
+	--even-row-bg-color: #f6f7f7;
+	--table-row-separator: #dfdfdf;
+}
+
+/* Global CSS */
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	margin: 0 auto;
+	box-sizing: border-box;
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+}
+
+.content {
+	width: 90%;
+	margin: 60px auto 0 auto;
+	text-align: center;
+}
+
+.page-title {
+	text-align: center;
+	font-family: sans-serif;
+	font-size: var(--headings-fs);
+	margin-bottom: 20px;
+	color: var(--page-heading-font-color);
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.is-bold {
+	font-weight: bold;
+}
+
+/* Header CSS */
+.header-holder {
+	display: flex;
+	height: 60px;
+	padding: 0 40px;
+	background-color: var(--header-bg-color);
+	color: white;
+	align-items: center;
+	justify-content: space-between;
+	.header-logo {
+		width: 110px;
+		height: auto;
+	}
+	.nav-bar {
+		display: flex;
+		list-style: none;
+		padding-inline-start: 0;
+		.nav-item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-left: 40px;
+			height: 25px;
+			color: white;
+			text-decoration: none;
+		}
+		.nav-icon {
+			height: 25px;
+			width: auto;
+		}
+		.nav-title {
+			font-family: sans-serif;
+			margin-left: 10px;
+		}
+	}
+}
+
+/* Footer CSS */
+.footer-holder {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	height: 40px;
+	align-items: center;
+	justify-content: flex-end;
+	background-color: var(--footer-bg-color);
+	color: var(--footer-font-color);
+	.footer-text {
+		font-weight: bold;
+		margin-right: 40px;
+	}
+}
+
+/* Table CSS */
+td {
+	padding: 0;
+}
+
+.lw-table {
+	width: 100%;
+	border-collapse: collapse;
+	.lw-table-title-line {
+		height: 40px;
+		font-size: var(--table-header-fs);
+		background-color: var(--table-header-bg-color);
+		color: var(--table-font-color);
+		.empty-th {
+			width: 5em;
+		}
+	}
+	.leaderboard-first-th {
+		position: relative;
+		text-align: left;
+		left: 20px;
+	}
+}
+
+.lw-table-line {
+	height: 70px;
+	font-size: var(--table-header-fs);
+	color: var(--table-font-color);
+	.country-item {
+		.country-name {
+			line-height: 70px;
+		}
+		.flag {
+			vertical-align: middle;
+			width: 53px;
+			height: 37px;
+		}
+	}
+	.left-country {
+		text-align: right;
+		.flag {
+			margin-left: 10px;
+		}
+	}
+	.right-country {
+		text-align: left;
+		.flag {
+			margin-right: 10px;
+		}
+	}
+	.leaderboard-country {
+		text-align: left;
+		margin-left: 20px;
+		.flag {
+			margin-right: 10px;
+		}
+	}
+}
+
+.lw-table-line {
+	border-bottom: 1px solid var(--table-row-separator);
+}
+
+.lw-table-line:nth-child(even) {
+	background-color: var(--even-row-bg-color);
+}
+
+.is-points {
+	font-size: var(--bolded-cell-font-size);
+	color: var(--header-bg-color);
+}
+
+/* 404 page CSS */
+.not-found-img {
+	max-width: 100%;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 750px) {
+	.under-750-none {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.under-500-none {
+		display: none;
+	}
+}
